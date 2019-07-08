@@ -27,7 +27,7 @@ export default {
     }
   },
   async created(){
-    let {data:{results}} = await this.$axios.get('http://www.akokono.com/api/albums/?format=json&page=1')
+    let {data:{results}} = await this.$axios.get('http://127.0.0.1:8000/api/albums/?format=json&page=1')
     this.results = results
   }
 }

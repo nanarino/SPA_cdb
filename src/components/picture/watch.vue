@@ -14,7 +14,7 @@
                         </div>
                     </header>
                     <article class="article-content">
-                        <p v-for='img in JSON.parse(album.imgurl)'><img class="aligncenter size-full" :src="'http://www.akokono.com/'+img"/></p>
+                        <p v-for='img in JSON.parse(album.imgurl)'><img class="aligncenter size-full" :src="'http://127.0.0.1:8000/'+img"/></p>
                     </article>
                 </div>
             </div>
@@ -40,7 +40,7 @@ export default {
     }
   },
   async created(){
-    let {data} = await this.$axios.get('http://www.akokono.com/api/album/'+this.$route.params.id+'/?format=json')
+    let {data} = await this.$axios.get('http://127.0.0.1:8000/api/album/'+this.$route.params.id+'/?format=json')
     this.album = data
   }
 }
