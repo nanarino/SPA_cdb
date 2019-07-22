@@ -1,4 +1,4 @@
-# cdb-spa
+# SPA_cdb
 
 > A Vue.js project adapted from my django project "cdb"
 
